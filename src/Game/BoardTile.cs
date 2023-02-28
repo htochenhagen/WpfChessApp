@@ -1,4 +1,5 @@
 ﻿using System.Windows.Media;
+using WpfChessApp.Models;
 
 namespace WpfChessApp.Game;
 
@@ -7,6 +8,7 @@ namespace WpfChessApp.Game;
 /// </summary>
 public class BoardTile : GameObject
 {
-    public Brush Brush { get; set; } = Brushes.Wheat;
+    public Brush Brush { get; set; } = Brushes.Red;
+    public ChessToken? CurrentChessToken { get; set; } = null;
     public override string Name => "Chess Board Tile";
 }

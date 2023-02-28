@@ -5,6 +5,55 @@
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Chess.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Chess.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="..\assets\Bishop_Black.png" Link="Game\ChessTokens\Bishop_Black.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="..\assets\Bishop_White.png" Link="Game\ChessTokens\Bishop_White.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="..\assets\King_White.png" Link="Game\ChessTokens\King_White.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="..\assets\Knight_Black.png" Link="Game\ChessTokens\Knight_Black.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="..\assets\Knight_White.png" Link="Game\ChessTokens\Knight_White.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="..\assets\Pawn_Black.png" Link="Game\ChessTokens\Pawn_Black.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="..\assets\Pawn_White.png" Link="Game\ChessTokens\Pawn_White.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="..\assets\Queen_Black.png" Link="Game\ChessTokens\Queen_Black.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="..\assets\Queen_White.png" Link="Game\ChessTokens\Queen_White.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="..\assets\Rook_Black.png" Link="Game\ChessTokens\Rook_Black.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="..\assets\Rook_White.png" Link="Game\ChessTokens\Rook_White.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="..\assets\King_Black.png" Link="Game\ChessTokens\King_Black.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="King_Black.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Game\ChessTokens\" />
+  </ItemGroup>
 
 </Project>

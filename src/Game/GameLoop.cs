@@ -1,5 +1,6 @@
 ﻿using System.Threading.Tasks;
 using System;
+using System.Windows.Controls.Primitives;
 
 namespace WpfChessApp.Game;
 
@@ -62,8 +63,9 @@ public class GameLoop
     /// <summary>
     /// Draw Game Graphics
     /// </summary>
-    public void Draw()
+    /// <param name="uniformGrid"></param>
+    public void Draw(UniformGrid uniformGrid)
     {
-        _myGame?.Draw();
+        _myGame?.Draw(uniformGrid);
     }
 }

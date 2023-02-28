@@ -5,12 +5,12 @@ using WpfChessApp.Game;
 
 namespace WpfChessApp
 {
-    public partial class MainWindow : Window
+    public partial class GameBoardView : Window
     {
         private readonly DispatcherTimer _graphicsTimer;
         private GameLoop _gameLoop;
 
-        public MainWindow()
+        public GameBoardView()
         {
             InitializeComponent();
 
@@ -24,10 +24,10 @@ namespace WpfChessApp
 
         private void GraphicsTimer_Tick(object? sender, EventArgs e)
         {
-            _gameLoop.Draw();
+            _gameLoop.Draw(ChessGrid);
         }
 
-        private void MainWindow_OnLoaded(object sender, RoutedEventArgs e)
+        private void GameBoardView_OnLoaded(object sender, RoutedEventArgs e)
         {
 
             // Initialize Game
