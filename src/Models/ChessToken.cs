@@ -8,7 +8,7 @@ namespace WpfChessApp.Models;
 /// </summary>
 public abstract class ChessToken : GameObject
 {
-    public Point CurrentPosition { get; set; }
-    public ChessTokenType ChessTokenType { get; set; }
-    public abstract void Move(Point newPosition);
+    public ChessTokenColor ChessTokenColor { get; set; }
+    public ChessTokenNumber ChessTokenNumber { get; set; }
+    public abstract MoveResult TryMove(Point oldPosition, Point newPosition);
 }

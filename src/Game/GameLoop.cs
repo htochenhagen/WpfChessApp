@@ -21,9 +21,14 @@ public class GameLoop
         _myGame = gameObj;
     }
 
+    public async void UpdateGame(GameContext gameContext)
+    {
+        _myGame?.Update(gameContext);
+    }
+
     /// <summary>
-    /// Start GameLoop
-    /// </summary>
+        /// Start GameLoop
+        /// </summary>
     public async void Start()
     {
         if (_myGame == null)
@@ -45,7 +50,7 @@ public class GameLoop
             // Update the current previous game time
             previousGameTime = previousGameTime + gameTime;
             // Update the game
-            _myGame.Update(gameTime);
+            //_myGame.Update(gameTime);
             // Update Game at 60fps
             await Task.Delay(8);
         }

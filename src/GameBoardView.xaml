@@ -8,6 +8,54 @@
         Loaded="GameBoardView_OnLoaded"
         Title="Chess game board" Height="800" Width="800">
     <Grid>
-        <UniformGrid Columns="8" Rows="8" x:Name="ChessGrid" Background="Gray"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <!--Leere Zeile-->
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <!--Leere Zeile-->
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <!--Leere Zeile-->
+            <RowDefinition Height="5"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <!--Leere Zeile-->
+            <RowDefinition Height="10"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <!--Leere Zeile-->
+            <RowDefinition Height="5"></RowDefinition>
+        </Grid.RowDefinitions>
+        <UniformGrid Columns="10" Rows="10" x:Name="ChessGrid" Background="Gray" />
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
+            <Label>Aktueller Spieler</Label>
+            <Label x:Name="LblCurrentPlayer" BorderBrush="MediumBlue" BorderThickness="2" Margin="5,0,0,0"></Label>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Horizontal">
+            <RadioButton Tag="Pawn1" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">Bauer 1</RadioButton>
+            <RadioButton Tag="Pawn2" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">Bauer 2</RadioButton>
+            <RadioButton Tag="Pawn3" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">Bauer 3</RadioButton>
+            <RadioButton Tag="Pawn4" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">Bauer 4</RadioButton>
+            <RadioButton Tag="Pawn5" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">Bauer 5</RadioButton>
+            <RadioButton Tag="Pawn6" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">Bauer 6</RadioButton>
+            <RadioButton Tag="Pawn7" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">Bauer 7</RadioButton>
+            <RadioButton Tag="Pawn8" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">Bauer 8</RadioButton>
+        </StackPanel>
+        <StackPanel Grid.Row="6" Orientation="Horizontal">
+            <RadioButton Tag="LeftRook" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">linker Turm</RadioButton>
+            <RadioButton Tag="LeftKnight" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">linkes Pferd</RadioButton>
+            <RadioButton Tag="LeftBishop" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">linker Läufer</RadioButton>
+            <RadioButton Tag="King" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">König</RadioButton>
+            <RadioButton Tag="Queen" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">Dame</RadioButton>
+            <RadioButton Tag="RightBishop" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">rechter Läufer</RadioButton>
+            <RadioButton Tag="RightKnight" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">rechtes Pferd</RadioButton>
+            <RadioButton Tag="RightRook" Checked="ToggleButton_OnChecked" Margin="5,0,0,0" GroupName="ChessToken">rechter Turm</RadioButton>
+        </StackPanel>
+        <StackPanel Grid.Row="8" Orientation="Horizontal">
+            <Label>Neue Position:</Label>
+            <TextBox Name="TxtNewPosition" Width="50" HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center">
+            </TextBox>
+            <Button Margin="5,0,0,0" Name="BtnSetNewPosition" Width="50" Click="BtnSetNewPosition_Click">Go!</Button>
+        </StackPanel>
     </Grid>
 </Window>

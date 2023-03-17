@@ -8,15 +8,17 @@ namespace WpfChessApp.Models.ChessTokens;
 /// </summary>
 public class Pawn : ChessToken
 {
-    public Pawn(ChessTokenType chessTokenType)
+    public Pawn(ChessTokenColor chessTokenColor, ChessTokenNumber chessTokenNumber)
     {
-        ChessTokenType = chessTokenType;
+        ChessTokenColor = chessTokenColor;
+        ChessTokenNumber = chessTokenNumber;
     }
 
     public override string Name => "Pawn";
 
-    public override void Move(Point newPosition)
+    public override MoveResult TryMove(Point oldPosition, Point newPosition)
     {
-        
+        // TODO: implement correct logic here and return appropriate move result!
+        return new MoveResult(true);
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace WpfChessApp.Game;
 
-public enum ChessTokenType
+public enum ChessTokenColor
 {
     Black,
     White

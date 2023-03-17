@@ -8,15 +8,16 @@ namespace WpfChessApp.Models.ChessTokens;
 /// </summary>
 public class Bishop : ChessToken
 {
-    public Bishop(ChessTokenType chessTokenType)
+    public Bishop(ChessTokenColor chessTokenColor, ChessTokenNumber chessTokenNumber)
     {
-        ChessTokenType = chessTokenType;
+        ChessTokenColor = chessTokenColor;
+        ChessTokenNumber = chessTokenNumber;
     }
 
     public override string Name => "Bishop";
 
-    public override void Move(Point newPosition)
+    public override MoveResult TryMove(Point oldPosition, Point newPosition)
     {
-        
+        return new MoveResult(false, "Not implemented at the moment!");
     }
 }
